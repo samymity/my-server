@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage Auth Demo</title>
+    <style>
+        .hidden { display: none; }
+        .story {
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        #loginSection, #storySection {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="loginSection">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="storySection" class="hidden">
+        <h2>Stories</h2>
+        <button id="logoutBtn">Logout</button>
+        
+        <div>
+            <h3>Add New Story</h3>
+            <form id="storyForm">
+                <div>
+                    <label for="storyTitle">Title:</label>
+                    <input type="text" id="storyTitle" required>
+                </div>
+                <div>
+                    <label for="storyContent">Content:</label>
+                    <textarea id="storyContent" required></textarea>
+                </div>
+                <button type="submit">Add Story</button>
+            </form>
+        </div>
+
+        <div id="storiesList">
+            <!-- Stories will be loaded here -->
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html> 
